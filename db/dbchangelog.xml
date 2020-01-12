@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog">
+
+    <changeSet id="1" author="ola">
+        <createTable tableName="rur_payment" schemaName="fpo">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="summ_transaction" type="int"/>
+            <column name="rec_cnum" type="varchar(50)"/>
+            <column name="dest_cnum" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="ola">
+        <createTable tableName="client" schemaName="fpo">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cnum" type="varchar(50)"/>
+            <column name="type_is_legal_entity" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="ola">
+        <createTable tableName="rule_configuration" schemaName="fpo">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4" author="ola">
+        <createTable tableName="alert" schemaName="fpo">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
