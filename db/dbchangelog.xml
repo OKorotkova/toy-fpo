@@ -32,19 +32,4 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="3" author="ola">
-        <createTable tableName="rule_configuration" schemaName="fpo">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-
-    <changeSet id="4" author="ola">
-        <createTable tableName="alert" schemaName="fpo">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
 </databaseChangeLog>
