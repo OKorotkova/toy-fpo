@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              version="2.1"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/jaxb/bindingschema_2_0.xsd">
+    <jxb:bindings schemaLocation="rurpayment.xsd" node=".//xs:element[@name='RURPayment']">
+        <jxb:class name = "RURPaymentDto"/>
+    </jxb:bindings>
+</jxb:bindings>
